@@ -1,11 +1,11 @@
 {
   "name": "piper",
   "version": "0.0.0",
-  "description": "",
+  "description": "A javascript meta-language with first-class pipes",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC"
+  "author": "Aria Stewart <aredridel@nbtsc.org>",
+  "license": "MIT",
+  "dependencies": {
+    "ometajs": "~3.3.5"
+  }
 }
