@@ -1,0 +1,11 @@
+var ometa = require('ometajs');
+
+ometa Piperly <: BSJSParser {
+    test = #test
+}
+
+Piperly.parse = function (source) {
+    return Piperly.matchAll(source, 'topLevel');
+}
+
+module.exports = Piperly;
