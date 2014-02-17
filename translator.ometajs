@@ -1,0 +1,11 @@
+var ometa = require('ometajs');
+
+ometa PiperlyTranslator <: BSJSTranslator {
+    pipe trans:left trans:right -> (left + '.pipe(' + right +')' )
+}
+
+PiperlyTranslator.dump = function (source) {
+    return PiperlyTranslator.match(source, 'trans');
+}
+
+module.exports = PiperlyTranslator;

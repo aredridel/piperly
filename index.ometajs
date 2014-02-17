@@ -1,11 +1,21 @@
 var ometa = require('ometajs');
 
 ometa Piperly <: BSJSParser {
-    test = #test
+    special = /->/:s -> [s, s]
+        | ^special,
+    pipeline = expr:p "->" pipeline:q -> [#pipe, p, q]
+        | expr,
+    stmt = "pipe" pipeline:p sc -> p
+        | ^stmt,
+    isKeyword :x = ?isKeyword(x)
 }
 
 Piperly.parse = function (source) {
     return Piperly.matchAll(source, 'topLevel');
+}
+
+function isKeyword(x) {
+    return BSJSParser._isKeyword(x) || x == 'pipe';
 }
 
 module.exports = Piperly;
