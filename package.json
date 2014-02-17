@@ -1,6 +1,6 @@
 {
   "name": "piperly",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A javascript meta-language with first-class pipes",
   "main": "index.js",
   "author": "Aria Stewart <aredridel@nbtsc.org>",
