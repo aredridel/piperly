@@ -3,7 +3,7 @@ var ometa = require('ometajs');
 ometa Piperly <: BSJSParser {
     special = /->/:s -> [s, s]
         | ^special,
-    pipeline = expr:p "->" pipeline:q -> [#pipe, p, q]
+    pipeline = pipeline:p "->" expr:q -> [#pipe, p, q]
         | expr,
     stmt = "pipe" pipeline:p sc -> p
         | ^stmt,
